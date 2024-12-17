@@ -1,3 +1,10 @@
 [tasks]
 main = "python hello.py"
 hello = ["main"]
+
+format.shell = """
+ruff format &&
+# biome format --write . &&
+dprint fmt &&
+textlint --fix "**/*.md"
+"""
